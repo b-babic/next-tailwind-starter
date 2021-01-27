@@ -1,5 +1,7 @@
 // @ts-check
 const withPlugins = require('next-compose-plugins');
+const withSVG = require('next-react-svg');
+const path = require('path');
 
 // NextJS configuration object. See available api below:
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
@@ -13,6 +15,13 @@ module.exports = withPlugins(
      * Example:
      * [pluginName, configObject] or pluginName
      * */
+
+    [
+      withSVG,
+      {
+        include: path.resolve(__dirname, 'assets/images'),
+      },
+    ],
   ],
   nextConfiguration
 );
