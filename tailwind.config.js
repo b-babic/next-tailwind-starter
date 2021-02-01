@@ -1,5 +1,8 @@
+const aspectRatio = require('@tailwindcss/aspect-ratio');
+const typography = require('@tailwindcss/typography');
+
 module.exports = {
-  purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
+  purge: ['./pages/**/*.tsx', './modules/**/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -7,5 +10,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/typography')],
+  plugins: [aspectRatio, typography],
 };
